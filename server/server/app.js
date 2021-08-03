@@ -8,7 +8,7 @@ const app = express()
 const PORT = 3005
 
 //987654321
-mongoose.connect('mongodb+srv://artur:987654321@cluster0.kdrp8.mongodb.net/graph?retryWrites=true&w=majority')
+mongoose.connect('mongodb+srv://artur:987654321@cluster0.kdrp8.mongodb.net/graph?retryWrites=true&w=majority',  { useUnifiedTopology: true, useNewUrlParser: true })
 
 //пакет позволяющий нашему express серверу использывать graphql API
 app.use(`/graphql`, graphqlHTTP({
